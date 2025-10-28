@@ -48,7 +48,7 @@ class DatasetManager:
                           arquivo_csv: str, 
                           target_column: str,
                           colunas_excluir: Optional[List[str]] = None,
-                          test_size: float = 0.4,
+                          test_size: float = 0.6,
                           val_size: float = 0.5,
                           random_state: int = 42) -> Dict:
         """
