@@ -36,6 +36,8 @@ class FeatureAnalyzer:
         self.features_selecionadas = None
         self.scores_mutual_info = None
         self.is_classification = None
+
+    
         
     def calcular_mutual_information(self, 
                                   X: Union[pd.DataFrame, np.ndarray], 
