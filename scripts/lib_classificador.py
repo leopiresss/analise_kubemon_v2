@@ -474,7 +474,7 @@ class UtilClassificadores:
                     'recall': recall,
                     'f1_score': f1,
                     'dataset': dataset_name,
-                    'data_avaliacao': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                  #  'data_avaliacao': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
                     'num_amostras_teste': len(y_test),
                     'num_classes': len(np.unique(y_test)),
                     'status': 'success'

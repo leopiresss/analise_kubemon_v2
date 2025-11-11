@@ -70,8 +70,10 @@ class DatasetManager:
             df = pd.read_csv(arquivo_csv)
             
             # Configurar colunas a excluir
+            
             if colunas_excluir is None:
                 colunas_excluir = ['os_timestamp', 'node_name', 'iteration']
+            
             
             # Adicionar target à lista de exclusão para features
             colunas_excluir_features = colunas_excluir + [target_column]
@@ -82,6 +84,7 @@ class DatasetManager:
             features_para_modelo = [col for col in features_numericas if col not in colunas_excluir_features]
             
             print(f"📊 Informações do dataset:")
+            print(f"colunas disponíveis: {df.columns.tolist()}")
             print(f"   • Total de registros: {len(df):,}")
             print(f"   • Total de features: {len(features_para_modelo)}")
             print(f"   • Colunas excluídas: {colunas_excluir_features}")
